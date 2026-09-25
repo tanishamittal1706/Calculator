@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="calculator.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <div id="calculator">
+    <input type="text" id="display" readonly>
+            <!--Keypad Container -->
+    <div id = "keys">
+            <!--Row 1 Top Control keys, Button AC-->
+        <button class = "btn btn-top" onclick="currentDisplay = ' ';
+        document.querySelector('#display').value = currentDisplay;">AC</button>
+        
+            <!-- Button /-->
+        <button class = "btn btn-top" onclick="currentDisplay = currentDisplay + '/';
+        document.querySelector('#display').value = currentDisplay;">/</button>
+        
+            <!--Button *-->
+        <button class = "btn btn-top" onclick="currentDisplay = currentDisplay + '*';
+        document.querySelector('#display').value = currentDisplay;">X</button>
+
+            <!--Button  to delete last one by one element -->
+        <button class = "btn btn-op" onclick="currentDisplay = currentDisplay.slice(0,-1);
+        document.querySelector('#display').value = currentDisplay;">⌫</button>
+             
+                   <!-- Row 2-->
+                <!--Button 7 -->
+        <button class = "btn" onclick="currentDisplay = currentDisplay + '7';
+        document.querySelector('#display').value = currentDisplay;">7</button>
+
+                <!-- Button 8-->
+        <button class = "btn" onclick="currentDisplay = currentDisplay + '8';
+        document.querySelector('#display').value = currentDisplay;">8</button>
+
+                <!-- Button 9-->
+        <button class = "btn" onclick="currentDisplay = currentDisplay + '9';
+        document.querySelector('#display').value = currentDisplay;">9</button>
+
+                <!-- Button - -->
+        <button class = "btn btn-op" onclick="currentDisplay = currentDisplay + '-';
+        document.querySelector('#display').value = currentDisplay;">-</button>
+
+                   <!-- Row 3 -->
+                <!--Button 4-->
+        <button class = "btn" onclick="currentDisplay = currentDisplay + '4';
+        document.querySelector('#display').value = currentDisplay;">4</button>
+        
+                <!--Button 5-->
+        <button class = "btn" onclick="currentDisplay = currentDisplay + '5';
+        document.querySelector('#display').value = currentDisplay;">5</button>
+        
+                <!--Button 6-->
+        <button class = "btn" onclick="currentDisplay = currentDisplay + '6';
+        document.querySelector('#display').value = currentDisplay;">6</button>
+        
+                <!--Button + -->
+        <button class = "btn btn-op" onclick="currentDisplay = currentDisplay + '+';
+        document.querySelector('#display').value = currentDisplay;">+</button>
+
+                <!-- Row 4-->
+                <!--Button 1-->
+        <button class = "btn" onclick="currentDisplay = currentDisplay + '1';
+        document.querySelector('#display').value = currentDisplay;">1</button>
+        
+        <!--Button 2-->
+        <button class = "btn" onclick="currentDisplay = currentDisplay + '2';
+        document.querySelector('#display').value = currentDisplay;">2</button>
+        
+        <!--Button 3-->
+        <button class = "btn" onclick="currentDisplay = currentDisplay + '3';
+        document.querySelector('#display').value = currentDisplay;">3</button>
+        
+        <!--Button = -->
+        <button class = "btn btn-op btn-equals" onclick="currentDisplay = eval(currentDisplay);
+        document.querySelector('#display').value = currentDisplay;">=</button>
+
+                <!-- Row 5-->
+                <!--Button %-->
+        <button class = "btn" onclick="currentDisplay = currentDisplay + '%';
+        document.querySelector('#display').value = currentDisplay;">%</button>
+
+                <!--Button 0 -->
+        <button class = "btn" onclick="currentDisplay = currentDisplay + '0';
+        document.querySelector('#display').value = currentDisplay;">0</button>
+
+                <!--Button .-->
+        <button class = "btn" onclick="currentDisplay = currentDisplay + '.';
+        document.querySelector('#display').value = currentDisplay;">.</button>
+     
+    </div>
+  </div>
+  <script>
+       let currentDisplay = ' ';
+       document.querySelector('#display').value = currentDisplay;
+  </script>
+</body>
+</html>
+   
